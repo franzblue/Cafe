@@ -26,8 +26,11 @@ public class CafeApp {
         cappuccino.setQuantity(cappuccinoResponse);
         System.out.printf("Thank you. Your %d %s will cost $%.2f.\n", cappuccino.getQuantity(), cappuccino.getName(), cappuccino.calculateProductTotal());
 
+        double totalOrdered = (coffee.calculateProductTotal()+espresso.calculateProductTotal()+cappuccino.calculateProductTotal());
+        double salesTax = totalOrdered * 00.069;
+        double amountDue = totalOrdered + salesTax;
 
-        System.out.printf("Your total order comes to $%.2f.", (coffee.calculateProductTotal()+espresso.calculateProductTotal()+cappuccino.calculateProductTotal()));
+        System.out.printf("Your total order comes to $%.2f. Add $%.2f in tax, now you owe $%.2f. Thank you!", totalOrdered, salesTax, amountDue);
 
     }
 
