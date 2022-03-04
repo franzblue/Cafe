@@ -1,7 +1,7 @@
 package com.perscholas.cafe;
 
 
-public class Product {
+public abstract class Product {
 
     // fields
     private String name;
@@ -20,10 +20,7 @@ public class Product {
     }
 
     // methods
-    public double calculateProductTotal() {
-        double total = this.price * this.quantity;
-        return total;
-    };
+    public abstract double calculateProductTotal();
 
     // getters/setters
 
