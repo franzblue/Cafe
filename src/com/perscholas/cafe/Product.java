@@ -1,8 +1,6 @@
 package com.perscholas.cafe;
 
-
 public abstract class Product {
-
     // fields
     private String name;
     private double price;
@@ -21,6 +19,9 @@ public abstract class Product {
 
     // methods
     public abstract double calculateProductTotal();
+    public abstract void addOptions();
+    public abstract void printOptions();
+//    public abstract void menu();
 
     // getters/setters
 
